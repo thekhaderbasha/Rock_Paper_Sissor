@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.box{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 10rem;
+
+
+}
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: blueviolet;
+}
+
+.rock{
+    height: 150px;
+    width: 150px;
+    background-image: url(rock.png);
+    background-size: cover;
+    border: none;
+}
+
+.paper{
+    height: 150px;
+    width: 150px;
+    background-image: url(paper.png);
+    background-size: cover;
+    border: none;
+    
+}
+
+.sissor{
+    height: 150px;
+    width: 150px;
+    background-image: url(sissor.png);
+    background-size: cover;
+    border: none;
+}
+
+.sissor:hover{
+    opacity: 0.7;
+    transition: 0.2s;
+}
+.paper:hover{
+    opacity: 0.7;
+    transition: 0.2s;
+}
+.rock:hover{
+    opacity: 0.7;
+    transition: 0.2s;
+}
+   
+@media only screen and (min-width: 480px){
+    .box{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 15rem;
+
+}
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: blueviolet;
+}
+
+.rock{
+    height: 250px;
+    width: 250px;
+    background-image: url(rock.png);
+    background-size: cover;
+    border: none;
+}
+
+.paper{
+    height: 250px;
+    width: 250px;
+    background-image: url(paper.png);
+    background-size: cover;
+    border: none;
+    
+}
+
+.sissor{
+    height: 250px;
+    width: 250px;
+    background-image: url(sissor.png);
+    background-size: cover;
+    border: none;
+}
+
+
+}
+    
+
+    </style>
+</head>
+<body>
+
+    <h1>rock paper sissor</h1>
+<div class="box">
+    <!-- for rock -->
+    <div class="rock"  onclick="
+        let randomNumber=Math.random() * 3;
+        let computerChoice;
+        if(randomNumber > 0 && randomNumber <=1)
+        {
+            computerChoice='rock 🪨🤘';
+        }
+        else if(randomNumber >1 && randomNumber <=2)
+        {
+            computerChoice='paper 📃🖐️';
+        }
+        else{
+            computerChoice='sissor ✌️✂️';
+        }
+
+        let resultMsg;
+        if(computerChoice ==='rock 🪨🤘'){
+            resultMsg='its a tie 💻🤝🙎  ';
+        }
+        else if(computerChoice ==='paper 📃🖐️')
+        {
+            resultMsg='computer  won💻💔 ';
+        }
+        else if (computerChoice ==='sissor ✌️✂️')
+        {
+            resultMsg='you won 🫵🏆🥳🙌 ';
+        }
+
+        alert(`your choice is rock 🪨🤘 . computer choice is ${computerChoice} and ${resultMsg}`);
+        "></div>
+        
+
+
+
+
+ <div class="paper"  onclick="
+         randomNumber=Math.random() * 3;
+         
+        if(randomNumber > 0 && randomNumber <=1)
+        {
+            computerChoice='rock 🪨🤘';
+        }
+        else if(randomNumber >1 && randomNumber <=2)
+        {
+            computerChoice='paper 📃🖐️';
+        }
+        else{
+            computerChoice='sissor ✌️✂️';
+        }
+
+      
+        if(computerChoice ==='rock 🪨🤘'){
+            resultMsg='you won 🫵🏆🥳🙌 ';
+        }
+        else if(computerChoice ==='paper 📃🖐️')
+        {
+            resultMsg='its a tie 💻🤝🙎 ';
+        }
+        else if (computerChoice ==='sissor ✌️✂️')
+        {
+            resultMsg='computer  won💻💔';
+        }
+
+        alert(`your choice is  paper 📃🖐️. computer choice is ${computerChoice} and ${resultMsg}`);
+        "></div>
+
+
+<div  class="sissor" onclick="
+         randomNumber=Math.random() * 3;
+    
+        if(randomNumber > 0 && randomNumber <=1)
+        {
+            computerChoice='rock 🪨🤘';
+        }
+        else if(randomNumber >1 && randomNumber <=2)
+        {
+            computerChoice='paper 📃🖐️';
+        }
+        else{
+            computerChoice='sissor ✌️✂️';
+        }
+
+      
+        if(computerChoice ==='rock 🪨🤘'){
+            resultMsg='computer  won💻💔';
+        }
+        else if(computerChoice ==='paper 📃🖐️')
+        {
+            resultMsg='you won 🫵🏆🥳🙌';
+        }
+        else if (computerChoice ==='sissor ✌️✂️')
+        {
+            resultMsg='its a tie 💻🤝🙎 ';
+        }
+
+        alert(`your choice is sissor ✌️✂️. computer choice is ${computerChoice} and ${resultMsg}`);
+        "></div>
+    </div>
+</body>
+</html>
